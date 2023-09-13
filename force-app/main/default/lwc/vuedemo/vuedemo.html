@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Vue Demo 1" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            
+            <lightning-input
+                label="Outer property"
+                onkeyup={handleKeyUp}
+                value={titleValue}
+            ></lightning-input>
+            <lightning-input
+                label="Account Id sent from 3rd party framework event (click account in list below to fire the event)"
+                value={eventValue}
+                disabled
+            ></lightning-input>
+
+            <!-- div element that is used to attach the 3rd party framework -->            
+            <div class="vue app1" lwc:dom="manual" onsendaccount={handleSendAccount}>                
+            </div>
+                        
+            <!--div class="vue app2" lwc:dom="manual">                
+            </div-->
+        </div>
+    </lightning-card>
+</template>
